@@ -1,0 +1,11 @@
+@DotnetAotFromQuery_HostAddress = http://localhost:5000
+
+GET {{DotnetAotFromQuery_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{DotnetAotFromQuery_HostAddress}}/todos/1
+Accept: application/json
+
+###
