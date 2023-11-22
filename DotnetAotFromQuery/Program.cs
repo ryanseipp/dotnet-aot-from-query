@@ -25,7 +25,7 @@ var todosApi = app.MapGroup("/todos");
 todosApi.MapGet("/", () => sampleTodos);
 todosApi.MapGet(
     "/{id}",
-    (int id, [FromQuery] int test = 0, int test2 = 0) =>
+    (int id, [FromQuery] int test = 10, int test2 = 10) =>
         sampleTodos.FirstOrDefault(a => a.Id == id) is { } todo
             ? Results.Ok(todo)
             : Results.NotFound()
